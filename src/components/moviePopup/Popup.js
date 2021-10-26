@@ -1,7 +1,7 @@
 import React from 'react';
 import './Popup.scss';
 
-const MoviePopup = ({ movieData, convertYoutubeUrl, closeMoviePopup }) => {
+const MoviePopup = ({ movieData, convertYoutubeUrl, popupHandler }) => {
 
   return (
     <div className='popup_container'>
@@ -21,7 +21,7 @@ const MoviePopup = ({ movieData, convertYoutubeUrl, closeMoviePopup }) => {
         </iframe>
       </div>
 
-      <div className='close_popup' onClick={() => closeMoviePopup()}>x</div>
+      <div className='close_popup' onClick={() => popupHandler()}>x</div>
     </div>
   )
 };

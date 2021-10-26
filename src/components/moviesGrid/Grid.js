@@ -5,7 +5,7 @@ import './Grid.scss';
 
 const Grid = ({ data }) => {
 
-  const { moviePopup, movieData, convertYoutubeUrl, openMoviePopup, closeMoviePopup } = Logic();
+  const { moviePopup, movieData, convertYoutubeUrl, popupHandler } = Logic();
 
   return (
     <div className='movies_container'>
@@ -17,7 +17,7 @@ const Grid = ({ data }) => {
         <MoviePopup
           movieData={movieData}
           convertYoutubeUrl={convertYoutubeUrl}
-          closeMoviePopup={closeMoviePopup}
+          popupHandler={popupHandler}
         />
         : null
       }
@@ -35,7 +35,7 @@ const Grid = ({ data }) => {
         <tbody>
           {data.map((movie, index) => {
             return (
-              <tr key={index} onClick={() => openMoviePopup(movie)}>
+              <tr key={index} onClick={() => popupHandler(movie)}>
                 <td>{index + 1}</td>
                 <td>{movie.Title}</td>
                 <td>{movie.Genre}</td>

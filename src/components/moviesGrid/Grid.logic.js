@@ -11,22 +11,16 @@ const Logic = () => {
         return iframeMarkup;
     }
 
-    const openMoviePopup = (movie) => {
-        setMoviePopup(true)
+    const popupHandler = (movie) => {
+        setMoviePopup(!moviePopup)
         setMovieData(movie)
-    }
-
-    const closeMoviePopup = () => {
-        setMoviePopup(false)
-        setMovieData({})
     }
 
     return {
         moviePopup,
         movieData,
         convertYoutubeUrl,
-        openMoviePopup,
-        closeMoviePopup
+        popupHandler
     };
 };
 
