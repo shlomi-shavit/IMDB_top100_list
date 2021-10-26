@@ -1,0 +1,43 @@
+.popup_container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 800px;
+    height: 500px;
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0px 40px 300px 200px rgb(0 0 0 / 70%);
+    
+    .iframe_container {
+        position: relative;
+        padding-top: 50%;
+    }
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .close_popup {
+        position: absolute;
+        top: -40px;
+        right: 0;
+        width: 25px;
+        height: 25px;
+        background: #fff;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #767676;
+        cursor: pointer;
+    }
+}
