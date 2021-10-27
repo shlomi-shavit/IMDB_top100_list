@@ -13,7 +13,7 @@ const Logic = () => {
 
     const popupHandler = (movie) => {
         setMoviePopup(!moviePopup)
-        setMovieData(movie)
+        setMovieData(!moviePopup ? movie : {})
     }
 
     return {
